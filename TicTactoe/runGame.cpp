@@ -1,23 +1,65 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
+int const ROW = 5;
+int const COL = 5;
 
-int const COLUMN = 3;
-int const ROW = 3;
-char gameBoard[COLUMN][ROW];
+char gameBoardObj[ROW][COL]{
 
-
-
-void drawGameBoard(char arrayBoard[COLUMN][ROW]);
-void runGame();
-bool checkWin();
+	{' ','|',' ','|',' '},
+	{'-','|','-','|','-'},
+	{' ','|',' ','|',' '},
+	{'-','|','-','|','-'},
+	{' ','|',' ','|',' '}
+}; //this is the game board
+						  
+void drawGame();
+void playerInput();
 
 int main()
 {
-	rungame();
-
+	cout << "Welcome to Tic-Tac-Toe!" << endl;
+	cout << endl;
+	drawGame();
+	cout << endl;
+	cout << "Player 1 starts. type the index of you choise." << endl;
+	cin.get()
 	return 0;
 }
+//this displays gameboard on screen
+void drawGame()
+{
 
+	for (int i = 0; i < 5; i++)
+	{
+		cout << gameBoardObj[0][i];
+	}
+	cout << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << gameBoardObj[1][i];
+	}
+	cout <<endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << gameBoardObj[2][i];
+	}
+	cout << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << gameBoardObj[3][i];
+	}
+	cout << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << gameBoardObj[4][i];
+	}
 
+} 
+void playerInput()
+{
+
+}
+//make the playerinput next time and the system thast checks if one player won the game.
